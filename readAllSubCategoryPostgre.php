@@ -41,7 +41,7 @@ $query=null;
 if(isset($_GET['subCategory']) && isset($_GET['category'])){
     $subCategory = $_GET['subCategory'];
     $category = $_GET['category'];
-    $query = "SELECT * FROM product WHERE subCategory = '" .$subCategory. "' AND category LIKE '" .$category. "%' ORDER BY ratings ASC";
+    $query = "SELECT * FROM product WHERE subCategory = '" .$subCategory. "' AND category LIKE '%" .$category. "%' ORDER BY ratings ASC";
 } else {
     $query = "SELECT * FROM product";
 }
