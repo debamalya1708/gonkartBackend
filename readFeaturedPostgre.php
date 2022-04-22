@@ -81,7 +81,7 @@ require 'databasePostgre.php';
 global $conn;
 
 
-$query = "SELECT * FROM product WHERE featured = 'no' ORDER BY ratings ASC";
+$query = "SELECT * FROM product WHERE featured = 'yes' ORDER BY ratings ASC";
 $result = pg_query($conn, $query);
 
     if (!$result) {
