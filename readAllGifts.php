@@ -35,14 +35,14 @@ endif;
 
 require 'databasePostgre.php';
 global $conn;
-$category =null;
+// $category =null;
 $query=null;
-if(isset($_GET['category'])){
-    $category = $_GET['category'];
+// if(isset($_GET['category'])){
+//     $category = $_GET['category'];
     $query = "SELECT * FROM product WHERE category LIKE %Gifts% ORDER BY ratings ASC";
-} else {
-    $query = "SELECT * FROM product";
-}
+// } else {
+//     $query = "SELECT * FROM product";
+// }
 
 // $query = "SELECT * FROM product";
 $result = pg_query($conn, $query);
